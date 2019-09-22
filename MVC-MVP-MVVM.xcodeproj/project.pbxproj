@@ -12,6 +12,12 @@
 		801DF3172334F18400AE676B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 801DF3152334F18400AE676B /* Main.storyboard */; };
 		801DF3192334F18600AE676B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 801DF3182334F18600AE676B /* Assets.xcassets */; };
 		801DF31C2334F18600AE676B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 801DF31A2334F18600AE676B /* LaunchScreen.storyboard */; };
+		80F7694F23366755005F5DC9 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F7694E23366755005F5DC9 /* PostTableViewCell.swift */; };
+		80F9A43E233624EE00008CD3 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F9A43D233624EE00008CD3 /* Post.swift */; };
+		80F9A440233625F000008CD3 /* PostNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F9A43F233625F000008CD3 /* PostNetworking.swift */; };
+		80F9A443233627AE00008CD3 /* GetPostsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F9A442233627AE00008CD3 /* GetPostsResponse.swift */; };
+		80F9A4452336281900008CD3 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F9A4442336281900008CD3 /* NetworkingService.swift */; };
+		80F9A448233628B800008CD3 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F9A447233628B800008CD3 /* NetworkingError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		801DF3182334F18600AE676B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		801DF31B2334F18600AE676B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		801DF31D2334F18600AE676B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80F7694E23366755005F5DC9 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		80F9A43D233624EE00008CD3 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		80F9A43F233625F000008CD3 /* PostNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNetworking.swift; sourceTree = "<group>"; };
+		80F9A442233627AE00008CD3 /* GetPostsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostsResponse.swift; sourceTree = "<group>"; };
+		80F9A4442336281900008CD3 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		80F9A447233628B800008CD3 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +66,68 @@
 		801DF3102334F18400AE676B /* MVC-MVP-MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				80F9A43A233624C100008CD3 /* Controller */,
+				80F9A4462336284C00008CD3 /* Error */,
+				80F9A439233624BB00008CD3 /* Model */,
+				80F9A43B233624C500008CD3 /* Service */,
+				80F9A43C233624CF00008CD3 /* View */,
 				801DF3112334F18400AE676B /* AppDelegate.swift */,
-				801DF3132334F18400AE676B /* ViewController.swift */,
 				801DF3152334F18400AE676B /* Main.storyboard */,
 				801DF3182334F18600AE676B /* Assets.xcassets */,
 				801DF31A2334F18600AE676B /* LaunchScreen.storyboard */,
 				801DF31D2334F18600AE676B /* Info.plist */,
 			);
 			path = "MVC-MVP-MVVM";
+			sourceTree = "<group>";
+		};
+		80F9A439233624BB00008CD3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				80F9A43D233624EE00008CD3 /* Post.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		80F9A43A233624C100008CD3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				801DF3132334F18400AE676B /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		80F9A43B233624C500008CD3 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				80F9A4412336279300008CD3 /* Response */,
+				80F9A43F233625F000008CD3 /* PostNetworking.swift */,
+				80F9A4442336281900008CD3 /* NetworkingService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		80F9A43C233624CF00008CD3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				80F7694E23366755005F5DC9 /* PostTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		80F9A4412336279300008CD3 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				80F9A442233627AE00008CD3 /* GetPostsResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		80F9A4462336284C00008CD3 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				80F9A447233628B800008CD3 /* NetworkingError.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +201,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80F9A443233627AE00008CD3 /* GetPostsResponse.swift in Sources */,
+				80F9A43E233624EE00008CD3 /* Post.swift in Sources */,
+				80F9A440233625F000008CD3 /* PostNetworking.swift in Sources */,
+				80F7694F23366755005F5DC9 /* PostTableViewCell.swift in Sources */,
+				80F9A448233628B800008CD3 /* NetworkingError.swift in Sources */,
+				80F9A4452336281900008CD3 /* NetworkingService.swift in Sources */,
 				801DF3142334F18400AE676B /* ViewController.swift in Sources */,
 				801DF3122334F18400AE676B /* AppDelegate.swift in Sources */,
 			);
@@ -285,6 +357,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TKJTPR7L3V;
 				INFOPLIST_FILE = "MVC-MVP-MVVM/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +376,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TKJTPR7L3V;
 				INFOPLIST_FILE = "MVC-MVP-MVVM/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
